@@ -30,7 +30,8 @@ router.post("/", (req, res) => {
     .save()
     .then(userPost => {
       res.status(201).json(userPost)
-    }).catch(err => console.log(err))
+    })
+    .catch(err => console.log(err))
 });
 
 router.put("/:id", (req, res) => {
@@ -44,7 +45,8 @@ router.put("/:id", (req, res) => {
 
 router.delete("/:id", (req, res) => {
   User
-    .findByIdAndRemove(req.params.id, () => res.json(null))
+    .findByIdAndRemove(req.params.id, () => res.json("User Deleted"))
+    .catch(err => console.log(err))
 });
 
 

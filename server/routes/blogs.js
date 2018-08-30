@@ -54,7 +54,9 @@ router.put("/:id", (req, res) => {
 
 router.delete("/:id", (req, res) => {
   Blog
-    .findByIdAndRemove(req.params.id, () => res.json(null))
+    .findByIdAndRemove(req.params.id, () => res.json("Blog Deleted"))
+    .catch(err => console.log(err))
 });
+
 
 module.exports = router;
