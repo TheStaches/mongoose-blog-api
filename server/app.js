@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
 
-mongoose.connect("mongodb://localhost/my-blog", {useNewUrlParser: true});
+mongoose.connect("mongodb://TheStaches:Holygra1l@ds137812.mlab.com:37812/mongoose-blog-api", {useNewUrlParser: true});
 mongoose.Promise = Promise;
 
 let app = express();
